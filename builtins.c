@@ -70,7 +70,7 @@ int simple_unsetenv(char **args,  char *input, int *exitStatus)
 	}
 	if (nTokens == 2)
 	unsetenv(args[1]);
-	else if (n_tokens != 2)
+	else if (nTokens != 2)
 	fprintf(stderr, "Try use \"unsetenv [KEY]\"\n");
 	return (1);
 }
