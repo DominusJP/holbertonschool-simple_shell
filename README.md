@@ -1,4 +1,4 @@
-# <a> <img src="https://ibb.co/yqzP1Wg" width=3% heigth=3% ></img></a> Simple Shell
+# <a> <img src="https://i.ibb.co/m4nTw6h/Twich-Banner-Offline-Ilustrado-Pastel-Morado-Rosa.png" alt="Twich-Banner-Offline-Ilustrado-Pastel-Morado-Rosa" border="0"> Simple Shell
 
 # Table of Contents
 
@@ -6,6 +6,7 @@
 [Files](#files)
 [System and Library calls](#system-and-library-calls)
 [Installation](#installation)
+[Xtra](#Xtra)
 
 ## Description
 
@@ -91,45 +92,11 @@ Or  non-interactive mode:
 $ echo "ls -la" | ./hsh
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Xtra
 
 What is the function getline good for?
 
 To write a program that prints "$ ", waits for the user to enter a command, and prints it on the next line.
-
-
-
 
 
 What is strtok good for?
@@ -137,55 +104,31 @@ What is strtok good for?
 To write a function that splits a string and returns an array of each word of the string.
 
 
-
-
-
 Executing a program:
 
 The system call execve allows a process to execute another program (man 2 execve). Note that this system call does load the new program into the current process’ memory in place of the “previous” program: on success execve does not return to continue the rest of the “previous” program.
-
-
-
-
 
 Creating processes
 
 The system call fork (man 2 fork) creates a new child process, almost identical to the parent (the process that calls fork). Once fork successfully returns, two processes continue to run the same program, but with different stacks, datas and heaps.
 
-
-
-
-
 What is wait good for?
 
 The wait system call (man 2 wait) suspends execution of the calling process until one of its children terminates.
-
-
-
-
 
 What is stat good for?
 
 The stat (man 2 stat) system call gets the status of a file. On success, zero is returned. On error, -1 is returned.
 
-
-
-
-
 What is _wich filename good for?
 
 To write a program that looks for files in the current PATH.
-
-
-
-
 
 Main function prototypes we may use:
 
 int main(void);
 int main(int ac, char **av);
 int main(int ac, char **av, char **env);
-
 
 Where:
 
