@@ -34,7 +34,7 @@ int simple_execute(char **arguments, char **argVector, int *exitStatus)
 	{
 	waitpid(-1, &status, 0);
 	if (WIFEXITED(status))
-	*exit_status = WEXITSTATUS(status);
+	*exitStatus = WEXITSTATUS(status);
 	if (arguments[0][0] != '/' && arguments[0][0] != '.')
 	free(new_arguments);
 	return (1);

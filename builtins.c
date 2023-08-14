@@ -105,7 +105,7 @@ int simple_env(char **args, char *input, int *exitStatus)
  * @exitStatus: exit status
  * Return: Exit success
  */
-int simple_exit(char **args, char *inpu, int *exitStatus)
+int simple_exit(char **args, char *input, int *exitStatus)
 {
 	int outputExit = 0;
 	(void)args;
@@ -119,7 +119,7 @@ int simple_exit(char **args, char *inpu, int *exitStatus)
 	}
 	if (args[2] != NULL)
 	{
-	fprintf(stderr, "just wrtite "exit"\n");
+	fprintf(stderr, "just wrtite: exit\n");
 	return (0);
 	}
 	outputExit = atoi(args[1]);

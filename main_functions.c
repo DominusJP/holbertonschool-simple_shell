@@ -6,7 +6,7 @@
  * Return: 1 (success)
  */
 
-int main(int argCount, char **argVector)
+int main(int argCount __attribute__((unused)), char **argVector __attribute__((unused)))
 {
     char **arguments = NULL;
     char *input = NULL;
@@ -27,7 +27,7 @@ int main(int argCount, char **argVector)
             free(input);
             break;
         }
-        if (validate_spaces(input))
+        if (validateSpaces(input))
         {
             free(input);
             continue;
