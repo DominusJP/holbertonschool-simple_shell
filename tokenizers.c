@@ -16,7 +16,7 @@ char **simple_tokenizer(char *inputT)
 	fprintf(stderr, "memory allocation error\n");
 	exit(EXIT_FAILURE);
 	}
-	token = strtok(input, DELIM_I);
+	token = strtok(inputT, DELIM_I);
 	while (token != NULL)
 	{
 	tokens[position] = token;
@@ -56,7 +56,7 @@ char **tokenizerPath(char *inputT)
 	fprintf(stderr, "memory allocation error\n");
 	exit(EXIT_FAILURE);
 	}
-	token = strtok(input, DELIM_P);
+	token = strtok(inputT, DELIM_P);
 	while (token != NULL)
 	{
 	tokens[position] = token;
