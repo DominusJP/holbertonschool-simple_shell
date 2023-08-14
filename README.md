@@ -1,3 +1,17 @@
+# <a> <img src="https://ibb.co/yqzP1Wg" width=3% heigth=3% ></img></a> Simple Shell
+
+# Table of Contents
+
+[Description](#description)
+[Files](#files)
+[System and Library calls](#system-and-library-calls)
+[Installation](#installation)
+
+## Description
+
+In computing, a shell is a computer program that exposes an operating system's services to a human user or other programs. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer's role and particular operation. It is named a shell because it is the outermost layer around the operating system.
+Command-line shells require the user to be familiar with commands and their calling syntax, and to understand concepts about the shell-specific scripting language (for example, bash)
+
 What is a process?
 
 A process is an instance of an executing program, that has a unique process ID. This process ID is used by many functions and system calls to interact with and manipulate processes. In order to retrieve the current process’ ID, you can use the system call getpid. To get the process parent id we use: getppid.
@@ -6,6 +20,105 @@ Within the same program execution: getpid() will return the same value.
 Across different program executions: getpid() will return different values for each execution, as each execution involves a separate process with a unique PID.
 
 In the same regard, running getppid() multiple times within the same program execution will likely give you the same value, but running it across different executions or instances of the program could result in different values.
+
+
+**The Simple Life of a Shell**
+
+1. Begin by Starting the Shell
+2. Pause and Await User Input
+3. Understand and Break Down User Input
+4. Carry Out the Command and Share the Outcome
+5. Return to Step 2 for More Actions
+* To finish using the shell, simply type the exit command at the prompt or use Ctrl-D, which is seen as the end of the file (EOF)
+
+## Files
+
+**`AUTHORS`** : List of contributors
+**`builtins.c.c`** : You can change directories, modify or add environment variables, delete environment variables, and also print the list of environment variables. If you wish to terminate the main loop and exit the shell, you also have that option.
+ **`main_functions.c`** : Obtain input from the Command Line Interface and subsequently analyze and carry it out.
+**`main.h`** : Header File
+**`man_1_simple_shell`** : Manual page of the simple shell
+
+## System and Library calls
+
+`exit` (man 3 exit)
+`fork` (man 2 fork
+`close` (man 2 close)
+`execve` (man 2 execve)
+`wait` (man 2 wait)
+`va_start` (man 2 va_start)
+`va_arg` (man 2 va_arg)
+`va_end` (man 2 va_end)
+`strtok` (man 3 strtok)
+`getline` (man 3 getline)
+`malloc` (man 3 malloc)
+`isatty` (man 3 isatty)
+`strdup` (man 3 strdup)
+`stat` (__xstat) (man 2 stat)
+`strcpy` (man 3 strcpy)
+`strcat` (man 3 strcat)
+`strchr` (man 3 strchr) 
+`perror` (man 3 perror)
+`open` (man 2 open)
+
+## Installation
+
+Clone this repository to your local machine:
+
+```
+$ git clone https://github.com/DominusJP/holbertonschool-simple_shell
+```
+ Go to the repository folder:
+
+```
+$ cd holbertonschool-simple_shell
+```
+
+Compile it with :
+
+```
+$ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+```
+
+Run the shell in interactive mode:
+
+```
+$ ./hsh
+```
+Or  non-interactive mode:
+
+```
+$ echo "ls -la" | ./hsh
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
