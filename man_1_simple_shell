@@ -1,1 +1,29 @@
-Featuring MAN for our simple shel
+.TH C Simple Shell
+
+.SH SYNOPSIS
+.B ./hsh
+.P
+.P
+.B /bin/[command] [option]
+
+.SH DESCRIPTION
+.LP
+.B hsh is a simple UNIX command language interpreter capable of executing commands.
+
+Invocation
+.P
+The hsh tool can be invoked both interactively and non-interactively. If hsh is invoked and the standard input is not connected to a terminal, it reads and executes the received commands in order. If hsh is invoked and the standard input is connected to a terminal (determined by isatty(3)), an interactive shell is opened. When running interactively, hsh displays the prompt #(carita feliz)->$ when it's ready to read a command.
+
+Environment
+
+When hsh is called into action, it inherits and replicates the environment of the parent process within which it was executed. This environment takes the form of an array containing name-value pairs that define variables using the format NAME=VALUE.
+Exit Status
+
+Exit Status
+
+hsh provides the exit status of the most recently executed command, unless a syntax error occurs. A zero indicates success, while a non-zero value indicates failure. All built-in commands yield a zero status upon success and either one or two in case of incorrect usage, as indicated by a corresponding error message.
+
+.SH AUTHORS
+
+Pablo Salina
+Pablo Ferraro
