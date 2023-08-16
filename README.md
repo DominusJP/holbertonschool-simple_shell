@@ -39,10 +39,10 @@ In the same regard, running getppid() multiple times within the same program exe
  **`main_functions.c`** : Obtain input from the Command Line Interface and subsequently analyze and carry it out.
 **`main.h`** : Header File
 **`man_1_simple_shell`** : Manual page of the simple shell
-**tokenizers.c **  Define two functions, simple_tokenizer and tokenizerPath, that take an input string and split it into an array of arguments (tokens) using specific delimiters.
-** validators.c ** This code defines two functions: validateInput and validateSpaces. The validateInput
-** executers.c ** Defines two functions: simple_execute and simple_execute_builtins. The simple_execute function forks a process and replaces the child process with a new program specified by the provided arguments
-** helperFunctions.c ** Includes three functions and a signal handler. The sigintH function handles the SIGINT signal (CTRL + C) by printing a specific message to the standard error output
+**`tokenizers.c`**Define two functions, simple_tokenizer and tokenizerPath, that take an input string and split it into an array of arguments (tokens) using specific delimiters.
+**`validators.c`** This code defines two functions: validateInput and validateSpaces. The validateInput
+**`executers.c`**Defines two functions: simple_execute and simple_execute_builtins. The simple_execute function forks a process and replaces the child process with a new program specified by the provided arguments
+**`helperFunctions.c`**Includes three functions and a signal handler. The sigintH function handles the SIGINT signal (CTRL + C) by printing a specific message to the standard error output
 ## System and Library calls
 
 `exit` (man 3 exit)
