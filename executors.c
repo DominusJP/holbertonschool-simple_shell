@@ -12,7 +12,7 @@ int simple_execute(char **arguments, char **argVector, int *exitStatus)
 	pid_t pid;
 	int status;
 	char *new_arguments;
-	new_arguments = validateInput(arguments, argVector);
+new_arguments = validateInput(arguments, argVector);
 	if (strcmp(new_arguments, "Fail access") == 0)
 	return (1);
 	pid = fork();
@@ -50,7 +50,8 @@ int simple_execute(char **arguments, char **argVector, int *exitStatus)
  * @exitStatus: Exit status
  * Return: Status to stay or exit the main loop, 1 or 0
  */
-int simple_execute_builtins(char **args, char *input, char **argVector, int *exitStatus)
+int simple_execute_builtins(char **args, char *input, char **argVector,
+int *exitStatus)
 {
 	int i = 0;
 	choose_builtins_t options[] = {

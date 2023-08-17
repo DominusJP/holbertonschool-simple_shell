@@ -10,7 +10,7 @@ char **simple_tokenizer(char *inputT)
 	int buffer = BUFSIZE, newBuffer = 0, position = 0;
 	char **tokens = NULL, *token = NULL;
 	char **backup_tokens = NULL;
-	tokens = malloc(buffer * sizeof(char *));
+tokens = malloc(buffer * sizeof(char *));
 	if (tokens == NULL)
 	{
 	fprintf(stderr, "memory allocation error\n");
@@ -50,10 +50,10 @@ char **tokenizerPath(char *inputT)
 	int buffer = BUFSIZE, newBuffer = 0, position = 0;
 	char **tokens = NULL, *token = NULL;
 	char **backup_tokens = NULL;
-	tokens = malloc(buffer * sizeof(char *));
-	if (tokens == NULL)
+tokens = malloc(buffer * sizeof(char *));
+if (tokens == NULL)
 	{
-	fprintf(stderr, "memory allocation error\n");
+fprintf(stderr, "memory allocation error\n");
 	exit(EXIT_FAILURE);
 	}
 	token = strtok(inputT, DELIM_P);

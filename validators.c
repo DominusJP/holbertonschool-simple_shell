@@ -11,7 +11,7 @@ char *validateInput(char **arguments, char **argVector __attribute__((unused)))
 	char *new_arguments, *first, *slash_argument = "/";
 	char **tokens_path, holder_env[1024];
 	int i = 0;
-	if (arguments[0][0] == '/' || arguments[0][0] == '.')
+if (arguments[0][0] == '/' || arguments[0][0] == '.')
 	{
 	new_arguments = arguments[0];
 	if ((access(new_arguments, F_OK) == -1))
@@ -56,7 +56,7 @@ char *validateInput(char **arguments, char **argVector __attribute__((unused)))
 int validateSpaces(char *inputT)
 {
 	int i = 0, flag = 1, len = 0;
-	len = strlen(inputT);
+len = strlen(inputT);
 	while (inputT[i] == ' ' || inputT[i] == '\n' || inputT[i] == '\t')
 	i++;
 	if (i != len)

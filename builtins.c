@@ -11,7 +11,7 @@ int simple_cd(char **args, char *input, int *exitStatus)
 {
 	int stat;
 	char s[128];
-	getcwd(s, sizeof(s));
+getcwd(s, sizeof(s));
 	(void)input;
 	(void)exitStatus;
 	if (args[1] == NULL)
